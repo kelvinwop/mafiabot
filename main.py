@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 # Loading Data From .env File
 load_dotenv()
 env_path = Path('.') / '.env'
-api_key = os.getenv("API_KEY")
 BOTTOKEN = os.getenv("BOT_TOKEN")
 
 # Setting Up Bot
