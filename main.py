@@ -18,6 +18,9 @@ client = commands.Bot(command_prefix = '=')
 async def on_ready():
 	print('Bot is Ready')
 
+@client.command()
+async def wehaveawinner():
+    print('NottCurious Wins Everything!!!!!!!!!!!!!!!!!!!!')
 
 @client.command()
 async def whosadick(ctx):
