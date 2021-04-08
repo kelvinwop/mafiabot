@@ -20,14 +20,15 @@ async def on_ready():
 	print('Bot is Ready')
 
 @client.event
-async def on_message(message):
-    # Only Reads From Private Testing Discord and Math-UwU-and-Nitro-Channel
-    #                              Priv                                           Math UWU
-   
-    # if message.channel.id == '829357837976076351' or message.channel.id == '784543998366842920':
+async def on_message(message):   
     current_time = datetime.now()
     current_time = current_time.strftime("%d/%m/%Y %H:%M:%S") # Get Current Time (For Debugging)
-    print('[%s] - %s sent %s' % (current_time, message.author, message.content))
+
+
+    # Only Reads From Private Testing Discord and Math-UwU-and-Nitro-Channel
+    #                              Priv                                           Math UWU
+    if message.channel.id == '829357837976076351' or message.channel.id == '784543998366842920':
+        print('[%s] - %s sent %s' % (current_time, message.author, message.content))
 
 @client.command()
 async def wehaveawinner(ctx):
@@ -40,5 +41,3 @@ async def whosadick(ctx):
 
 # Execute Commands
 client.run(BOTTOKEN)
-
-log_txt_file.close()
